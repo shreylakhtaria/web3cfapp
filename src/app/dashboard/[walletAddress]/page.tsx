@@ -12,7 +12,6 @@ export default function DashboardPage() {
     const account = useActiveAccount();
     
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-
     const contract = getContract({
         client: client,
         chain: sepolia,
