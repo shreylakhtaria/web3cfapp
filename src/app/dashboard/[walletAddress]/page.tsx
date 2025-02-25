@@ -1,7 +1,7 @@
 'use client';
 import { client } from "@/app/client";
 import { CROWDFUNDING_FACTORY } from "@/app/constants/contracts";
-import { MyCampaignCard } from "@/app/components/MyCampaignCard";
+import { MyCampaignCard } from "@/components/MyCampaignCard";
 import { useState } from "react";
 import { getContract } from "thirdweb";
 import { sepolia} from "thirdweb/chains";
@@ -86,10 +86,10 @@ const CreateCampaignModal = (
                 account: account!,
                 contractId: "Crowdfunding",
                 contractParams: {
-                    name: campaignName,
-                    description: campaignDescription,
-                    goal: campaignGoal,
-                    deadline: campaignDeadline
+                     campaignName,
+                     campaignDescription,
+                     campaignGoal,
+                     campaignDeadline
                 },
                 publisher: "0x30386c4cDdC94d5b235c7079309AF1487D0665Cb",
                 version: "1.0.0",
