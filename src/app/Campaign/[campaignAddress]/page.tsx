@@ -11,6 +11,7 @@ import { lightTheme, TransactionButton, useActiveAccount, useReadContract } from
 export default function CampaignPage() {
     const account = useActiveAccount();
     const { campaignAddress } = useParams();
+    console.log(campaignAddress);
     const [isEditing, setIsEditing] = useState<boolean>(false);
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 

@@ -5,14 +5,14 @@ import {  sepolia } from "thirdweb/chains";
 import { useReadContract } from "thirdweb/react";
 
 type MyCampaignCardProps = {
-    contractAddress: string;
+    campaignAddress: string;
 };
 
-export const MyCampaignCard: React.FC<MyCampaignCardProps> = ({ contractAddress }) => {
+export const MyCampaignCard: React.FC<MyCampaignCardProps> = ({ campaignAddress }) => {
     const contract = getContract({
         client: client,
         chain: sepolia,
-        address: contractAddress,
+        address: campaignAddress,
     });
 
     // Get Campaign Name
@@ -36,7 +36,7 @@ export const MyCampaignCard: React.FC<MyCampaignCardProps> = ({ contractAddress 
                 </div>
                 
                 <Link
-                    href={`/campaign/${contractAddress}`}
+                    href={`/campaign/${campaignAddress}`}
                     passHref={true}
                 >
                     <p className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">

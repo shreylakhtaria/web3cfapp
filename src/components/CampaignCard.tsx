@@ -1,9 +1,11 @@
 'use client'
 import { client } from "@/app/client";
 import Link from "next/link";
+import { useEffect } from "react";
 import { getContract } from "thirdweb";
 import {  sepolia } from "thirdweb/chains";
 import { useReadContract } from "thirdweb/react";
+
 
 type CampaignCardProps = {
     campaignAddress: string;
@@ -16,8 +18,7 @@ export const CampaignCard: React.FC<CampaignCardProps> = ({ campaignAddress }) =
         address: campaignAddress,
     });
 
-    console.log(campaignAddress);
-
+    
     // Get Campaign Name
     const {data: campaignName} = useReadContract({
         contract: contract,

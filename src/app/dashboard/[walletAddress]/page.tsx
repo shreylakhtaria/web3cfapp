@@ -12,6 +12,8 @@ export default function DashboardPage() {
     const account = useActiveAccount();
     
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+    
     const contract = getContract({
         client: client,
         chain: sepolia,
@@ -41,7 +43,7 @@ export default function DashboardPage() {
                         myCampaigns.map((campaign, index) => (
                             <MyCampaignCard
                                 key={index} 
-                                contractAddress={campaign.campaignAddress}
+                                campaignAddress={campaign.campaignAddress}
                             />
                         ))
                     ) : (
@@ -80,27 +82,27 @@ const CreateCampaignModal = (
         setIsDeployingContract(true);
         try {
             console.log("Deploying contract...");
-            const contractAddress = await deployPublishedContract({
+            const campaignAddress = await deployPublishedContract({
                 client: client,
                 chain: sepolia,
                 account: account!,
                 contractId: "Crowdfunding",
-                contractParams: {
-                     campaignName,
-                     campaignDescription,
-                     campaignGoal,
-                     campaignDeadline
+                contractParams: { 
+                     name: campaignName,
+                     description: campaignDescription,
+                     goal: campaignGoal,
+                     _durationInDays: campaignDeadline,
                 },
                 publisher: "0x30386c4cDdC94d5b235c7079309AF1487D0665Cb",
                 version: "1.0.0",
             });
-            alert("Contract deployed successfully!");
+            alert(`Contract deployed successfully! Address: ${campaignAddress}`);
         } catch (error) {
             console.error(error);
         } finally {
             setIsDeployingContract(false);
             setIsModalOpen(false);
-            refetch
+            refetch();
         }
     };
 
