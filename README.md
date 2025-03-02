@@ -1,5 +1,4 @@
 
-![tw-banner](https://github.com/thirdweb-example/next-starter/assets/57885104/20c8ce3b-4e55-4f10-ae03-2fe4743a5ee8)
 
 # thirdweb-next-starter
 
@@ -26,34 +25,13 @@ To learn how to create a client ID, refer to the [client documentation](https://
 Install dependencies
 
 ```bash
-yarn
+npm install
 ```
 
 Start development server
 
 ```bash
-yarn dev
+npm run dev
 ```
 
-Create a production build
 
-```bash
-yarn build
-```
-
-Preview the production build
-
-```bash
-yarn start
-```
-
-## Resources
-
-- [Documentation](https://portal.thirdweb.com/typescript/v5)
-- [Templates](https://thirdweb.com/templates)
-- [YouTube](https://www.youtube.com/c/thirdweb)
-- [Blog](https://blog.thirdweb.com)
-
-## Need help?
-
-For help or feedback, please [visit our support site](https://thirdweb.com/support)
