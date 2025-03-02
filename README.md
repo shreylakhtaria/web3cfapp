@@ -1,37 +1,43 @@
+# Decentralized CrowdFunding DApp
 
+This project is a **Decentralized CrowdFunding Application** built using **Solidity** and **React.js**.  
+It allows users to **create campaigns** and **contribute funds** directly on the blockchain.
 
-# thirdweb-next-starter
+---
 
-Starter template to build an onchain react native app with [thirdweb](https://thirdweb.com/) and [next](https://nextjs.org/).
+## Project Information
+
+- **Project Creator:** Shrey Manish Lakhtaria  
+- **Roll Number:** 23CS039  
+- **Tech Stack:** Solidity, React.js  
+
+---
+
+## Features
+
+- Create fundraising campaigns on-chain.
+- Contribute to campaigns securely via smart contracts.
+- View all active campaigns with real-time blockchain data.
+- Transparent and decentralized - no third party involved.
+
+---
 
 ## Installation
 
-Install the template using [thirdweb create](https://portal.thirdweb.com/cli/create)
+Clone the repository and install dependencies:
 
 ```bash
-  npx thirdweb create app --next
-```
+git clone <repository-url>
+cd <project-folder>
+npm install
 
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file:
 
-`CLIENT_ID`
+CLIENT_ID
 
 To learn how to create a client ID, refer to the [client documentation](https://portal.thirdweb.com/typescript/v5/client). 
 
-## Run locally
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Start development server
-
-```bash
-npm run dev
-```
-
-
+```bash 
+npm run dev 
